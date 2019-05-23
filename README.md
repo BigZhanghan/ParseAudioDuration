@@ -10,12 +10,10 @@
 - (void)handleParseAudioFileStreamProperty:(AudioFileStreamPropertyID)propertyID
                                    ioFlags:(AudioFileStreamPropertyFlags *)flags
 
-4、音频数据的字节总量audioDataByteCount可以通过kAudioFileStreamProperty_AudioDataByteCount获取:
-//获取音频数据的字节总量
+4、音频数据的字节总量audioDataByteCount可以通过kAudioFileStreamProperty_AudioDataByteCount获取:获取音频数据的字节总量
 - (void)parsedAudioDataByteCount;
 
-5、码率bitRate可以通过kAudioFileStreamProperty_BitRate获取:
-//获取音频码率
+5、码率bitRate可以通过kAudioFileStreamProperty_BitRate获取:获取音频码率
 - (void)parsedBitRate;
 
-根据  double duration = (audioDataByteCount * 8) / bitRate 计算在线音频时长
+6、根据  double duration = (audioDataByteCount * 8) / bitRate 计算在线音频时长
